@@ -144,7 +144,7 @@ table.lines { border-collapse: collapse; width: 100%; min-width: 620px; font: 13
 .lines td { vertical-align: top; padding: 0 10px; }
 .lines td.n { width: 1%; min-width: 38px; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; user-select: none; border-right: 1px solid var(--line); background: var(--bg); }
 .lines td.m { width: 1%; text-align: center; color: var(--muted); user-select: none; }
-.lines td.t { white-space: pre-wrap; overflow-wrap: anywhere; width: 50%; }
+.lines td.t { white-space: pre-wrap; overflow-wrap: anywhere; }
 .lines td.t + td.n { border-left: 1px solid var(--line); }
 .lines td.t.del { background: var(--del-soft); }
 .lines td.t.ins { background: var(--ins-soft); }
@@ -153,7 +153,6 @@ table.lines { border-collapse: collapse; width: 100%; min-width: 620px; font: 13
 .lines tr.u-ins td.t { background: var(--ins-soft); }
 .lines tr.u-del td.m { color: var(--del-fg); }
 .lines tr.u-ins td.m { color: var(--ins-fg); }
-.lines td.t { width: auto; }
 
 .credit { padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; letter-spacing: 0.04em; }
 
@@ -165,14 +164,7 @@ table.lines { border-collapse: collapse; width: 100%; min-width: 620px; font: 13
   .stat.note { margin-left: 0; }
   .split { grid-template-columns: 1fr; }
   .split .col + .col { border-left: 0; border-top: 2px solid var(--line); }
-}
-@media (max-width: 720px) {
-  .flow { font-size: 11px; }
-  table.lines { font-size: 11px; }
-}
-@media (max-height: 500px) {
-  .flow { font-size: 11px; }
-  table.lines { font-size: 11px; }
+  .flow, table.lines { font-size: 11px; }
 }
 </style>
 
