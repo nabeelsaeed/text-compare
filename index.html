@@ -162,7 +162,7 @@ table.lines { border-collapse: collapse; width: 100%; min-width: 620px; font: 13
   .split { grid-template-columns: 1fr; }
   .split .col + .col { border-left: 0; border-top: 2px solid var(--line); }
 }
-@media (max-width: 720px) {
+@media (max-width: 720px), (orientation: landscape) and (max-height: 500px) {
   .flow { font-size: 11px; }
   table.lines { font-size: 11px; }
 }
