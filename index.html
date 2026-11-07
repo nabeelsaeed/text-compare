@@ -14,47 +14,53 @@
   --line: #d5dce2;
   --accent: #1f5f99;
   --on-accent: #ffffff;
+  --del-mark: #a61b1b;
+  --ins-mark: #17692f;
   --del-soft: #fbe9e9;
   --del-strong: #f5b9b9;
   --del-fg: #a61b1b;
   --ins-soft: #e4f4ea;
   --ins-strong: #a9e0bd;
-  --ins-fg: #11582b;
+  --ins-fg: #17692f;
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #12171b;
-    --surface: #1a2025;
-    --fg: #e3e8ec;
-    --muted: #97a3ae;
-    --line: #2b343c;
-    --accent: #6ba9e6;
-    --on-accent: #0c1620;
-    --del-soft: #34191c;
-    --del-strong: #6b2a2f;
-    --del-fg: #ff8a8a;
-    --ins-soft: #15301f;
-    --ins-strong: #25613b;
-    --ins-fg: #6fe09a;
+    --bg: #202124;
+    --surface: #292a2d;
+    --fg: #e8eaed;
+    --muted: #9aa0a6;
+    --line: #3c4043;
+    --accent: #1f5f99;
+    --on-accent: #ffffff;
+    --del-mark: #f9b4ad;
+    --ins-mark: #a5deb5;
+    --del-soft: #3a2523;
+    --del-strong: #983530;
+    --del-fg: #f9b4ad;
+    --ins-soft: #1e3a2a;
+    --ins-strong: #276a3d;
+    --ins-fg: #a5deb5;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #12171b;
-  --surface: #1a2025;
-  --fg: #e3e8ec;
-  --muted: #97a3ae;
-  --line: #2b343c;
-  --accent: #6ba9e6;
-  --on-accent: #0c1620;
-  --del-soft: #34191c;
-  --del-strong: #6b2a2f;
-  --del-fg: #ff8a8a;
-  --ins-soft: #15301f;
-  --ins-strong: #25613b;
-  --ins-fg: #6fe09a;
+  --bg: #202124;
+  --surface: #292a2d;
+  --fg: #e8eaed;
+  --muted: #9aa0a6;
+  --line: #3c4043;
+  --accent: #1f5f99;
+  --on-accent: #ffffff;
+  --del-mark: #f9b4ad;
+  --ins-mark: #a5deb5;
+  --del-soft: #3a2523;
+  --del-strong: #983530;
+  --del-fg: #f9b4ad;
+  --ins-soft: #1e3a2a;
+  --ins-strong: #276a3d;
+  --ins-fg: #a5deb5;
   color-scheme: dark;
 }
 
@@ -122,8 +128,8 @@ textarea:focus-visible, button:focus-visible, input:focus-visible + span { outli
 .stat { display: flex; align-items: baseline; gap: 8px; }
 .stat b { font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .stat span { color: var(--muted); }
-.stat.del b { color: var(--del-fg); }
-.stat.ins b { color: var(--ins-fg); }
+.stat.del b { background: var(--del-strong); color: var(--del-fg); padding: 0 8px; border-radius: 4px; }
+.stat.ins b { background: var(--ins-strong); color: var(--ins-fg); padding: 0 8px; border-radius: 4px; }
 .stat.note { margin-left: auto; color: var(--muted); }
 
 .result { display: flex; flex-direction: column; gap: 8px; }
@@ -155,8 +161,8 @@ table.lines { border-collapse: collapse; width: 100%; min-width: 620px; font: 13
 .lines td.empty { background: var(--bg); }
 .lines tr.u-del td.t { background: var(--del-soft); }
 .lines tr.u-ins td.t { background: var(--ins-soft); }
-.lines tr.u-del td.m { color: var(--del-fg); }
-.lines tr.u-ins td.m { color: var(--ins-fg); }
+.lines tr.u-del td.m { color: var(--del-mark); }
+.lines tr.u-ins td.m { color: var(--ins-mark); }
 
 .credit { padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; letter-spacing: 0.04em; }
 
